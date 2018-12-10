@@ -1,0 +1,19 @@
+{
+  "name": "hilighter",
+  "version": "1.0.0",
+  "description": "A tiny module which parses and hilights the key that is pased",
+  "main": "src/index.html",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jaya Krishna",
+  "license": "MIT",
+  "devDependencies": {
+    "html-loader": "^0.5.5",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
