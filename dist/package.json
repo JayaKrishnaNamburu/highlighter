@@ -1,8 +1,0 @@
-{
-  "name": "highlighter",
-  "version": "1.0.0",
-  "description": "A tiny module which parses and highlights the key that is pased",
-  "main": "index.js",
-  "author": "Jaya Krishna",
-  "license": "MIT"
-}

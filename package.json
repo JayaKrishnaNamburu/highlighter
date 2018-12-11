@@ -2,7 +2,7 @@
   "name": "highlighter",
   "version": "1.0.0",
   "description": "A tiny module which parses and highlights the key that is pased",
-  "main": "src/index.html",
+  "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack",
