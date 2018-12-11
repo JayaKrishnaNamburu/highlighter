@@ -1,0 +1,19 @@
+language: node_js
+sudo: false
+nodejs:
+  - 8
+notifications:
+  email: false
+jobs:
+  include:
+    - stage: install
+      script: npm install
+    - stage: build
+      script: npm build
+    - stage: release
+      node_js: lts/*
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release

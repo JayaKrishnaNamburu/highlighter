@@ -1,4 +1,4 @@
-const hilighter = (key, text) => {
+const highlighter = (key, text) => {
   var reg = new RegExp(key, "gi");
   if (reg.test(text)) {
     const parser = new DOMParser();
@@ -11,4 +11,4 @@ const hilighter = (key, text) => {
   return text;
 };
 
-export default hilighter;
+export default highlighter;
