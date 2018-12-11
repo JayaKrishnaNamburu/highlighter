@@ -7,7 +7,7 @@ A simple hilighter for hilighting the key that is passed from the given text.
 ### Imprt
 
 ```
-import hilighter from "simple-text-highlighter";
+import highlighter from "simple-text-highlighter";
 ```
 
 ### Usage
@@ -15,7 +15,7 @@ import hilighter from "simple-text-highlighter";
 ```
 <span
     dangerouslySetInnerHTML={{
-        __html: hilighter("test", "test test test maketestdsfk test")
+        __html: highlighter("test", "test test test maketestdsfk test")
     }}
 />
 ```
