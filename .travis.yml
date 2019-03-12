@@ -17,3 +17,10 @@ jobs:
     - stage: build
       name: 'Build Stage'
       script: npm build
+    - stage: deploy
+      name: 'Deploying to npm'
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release 
