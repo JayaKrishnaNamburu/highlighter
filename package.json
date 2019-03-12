@@ -1,13 +1,14 @@
 {
   "name": "simple-text-highlighter",
-  "version": "2.0.0",
+  "version": "0.0.0-semantically-managed",
   "description": "A tiny module which parses and highlights the key that is pased",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
     "copy": "cp package.json dist/ && cp README.md dist/",
     "build": "webpack && npm run copy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz"
   },
   "author": "Jaya Krishna",
   "license": "MIT",
@@ -17,9 +18,33 @@
     "simple-highlighter"
   ],
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/npm": "^5.1.4",
+    "commitizen": "^3.0.7",
+    "cz-conventional-changelog": "^2.1.0",
     "html-loader": "^0.5.5",
+    "semantic-release": "^15.13.3",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
-  }
+    "webpack-dev-server": "^3.2.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "plugins": [
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "docs/CHANGELOG.md"
+      }
+    ]
+  ]
 }
