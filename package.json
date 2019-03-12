@@ -33,6 +33,11 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "release": {
+    "prepare": [
+      "@semantic-release/changelog"
+    ]
+  },
   "plugins": [
     [
       "@semantic-release/npm",
@@ -41,10 +46,10 @@
       }
     ],
     [
-      "@semantic-release/changelog",
-      {
-        "changelogFile": "docs/CHANGELOG.md"
-      }
+      "@semantic-release/changelog", 
+        {
+          "changelogFile": "docs/CHANGELOG.md"
+        }
     ]
   ]
 }
