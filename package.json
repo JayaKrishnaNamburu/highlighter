@@ -8,7 +8,8 @@
     "copy": "cp package.json dist/ && cp README.md dist/",
     "build": "webpack && npm run copy",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
   },
   "author": "Jaya Krishna",
   "license": "MIT",
