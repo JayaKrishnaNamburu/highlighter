@@ -16,4 +16,4 @@ jobs:
       script: npm run test
     - stage: build
       name: 'Build Stage'
-      script: npm run build
+      script: npm build
