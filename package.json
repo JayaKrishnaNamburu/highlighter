@@ -1,12 +1,11 @@
 {
-  "name": "text-highlighter",
+  "name": "text-highlighter-regex",
   "version": "0.0.0-development",
   "description": "A tiny module which parses and highlights the key that is pased",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "copy": "cp package.json dist/",
-    "build": "webpack && npm run copy",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 0",
     "commit": "git-cz",
     "semantic-release": "npm run build && semantic-release"
@@ -41,6 +40,7 @@
   "release": {
     "prepare": [
       "@semantic-release/changelog",
+      "@semantic-release/npm",
       {
         "path": "@semantic-release/git",
         "assets": [
