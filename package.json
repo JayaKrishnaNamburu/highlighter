@@ -50,8 +50,7 @@
         ],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
-    ],
-
+    ]
   },
   "plugins": [
     "@semantic-release/commit-analyzer",
