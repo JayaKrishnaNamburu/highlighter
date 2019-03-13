@@ -1,5 +1,5 @@
 {
-  "name": "simple-text-highlighter",
+  "name": "text-highlighter",
   "version": "0.0.0-development",
   "description": "A tiny module which parses and highlights the key that is pased",
   "main": "index.js",
