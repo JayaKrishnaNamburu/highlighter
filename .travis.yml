@@ -8,8 +8,6 @@ jobs:
   include:
     - stage: install
       script: npm install
-    - stage: build
-      script: npm build
     - stage: release
       node_js: lts/*
       deploy:
