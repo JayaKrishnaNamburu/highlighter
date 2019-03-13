@@ -1,6 +1,6 @@
 {
   "name": "text-highlighter-regex",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "A tiny module which parses and highlights the key that is pased",
   "main": "index.js",
   "scripts": {
@@ -56,7 +56,9 @@
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ],
-    "publish": ["@semantic-release/github"]
+    "publish": [
+      "@semantic-release/github"
+    ]
   },
   "plugins": [
     "@semantic-release/commit-analyzer",
