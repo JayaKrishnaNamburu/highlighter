@@ -40,6 +40,9 @@
   "release": {
     "prepare": [
       "@semantic-release/changelog",
+      ["@semantic-release/github", {
+        "assets": "dist/*.tgz"
+      }],
       ["@semantic-release/npm", {
         "npmPublish": false
       }],
@@ -60,9 +63,7 @@
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     "@semantic-release/npm",
-    ["@semantic-release/github", {
-      "assets": "dist/*.tgz"
-    }]
+    "@semantic-release/github"
   ],
   "repository": {
     "type": "git",
