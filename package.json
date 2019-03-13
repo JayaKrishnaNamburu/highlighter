@@ -1,6 +1,6 @@
 {
   "name": "text-highlighter-regex",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A tiny module which parses and highlights the key that is pased",
   "main": "index.js",
   "scripts": {
@@ -69,7 +69,9 @@
       "@semantic-release/github",
       {
         "assets": [
-          {"path": "dist/*.tgz"}
+          {
+            "path": "dist/*.tgz"
+          }
         ]
       }
     ]
