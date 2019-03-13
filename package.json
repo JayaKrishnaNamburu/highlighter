@@ -9,7 +9,7 @@
     "build": "webpack && npm run copy",
     "test": "echo \"Error: no test specified\" && exit 0",
     "commit": "git-cz",
-    "semantic-release": "semantic-release"
+    "semantic-release": "npm run build && semantic-release"
   },
   "author": "Jaya Krishna",
   "license": "MIT",
@@ -23,6 +23,7 @@
     "@semantic-release/commit-analyzer": "^6.1.0",
     "@semantic-release/git": "^7.0.8",
     "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.4",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^2.1.0",
@@ -49,13 +50,19 @@
         ],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
-    ]
+    ],
+
   },
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
-    "@semantic-release/github"
+    ["@semantic-release/npm", {
+      "npmPublish": false
+    }],
+    ["@semantic-release/github", {
+      "assets": "dist/*.tgz"
+    }]
   ],
   "repository": {
     "type": "git",
