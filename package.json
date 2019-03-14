@@ -1,0 +1,75 @@
+{
+  "name": "text-highlighter-regex",
+  "version": "0.0.0-semantically-released",
+  "description": "A tiny module which parses and highlights the key that is pased",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "copy": "cp package.json dist/ && cp README.md dist/",
+    "build": "webpack && npm run copy",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "commit": "git-cz",
+    "semantic-release": "npm run build && semantic-release"
+  },
+  "author": "Jaya Krishna",
+  "license": "MIT",
+  "homepage": "https://github.com/JayaKrishnaNamburu/highlighter#readme",
+  "keywords": [
+    "highlighter",
+    "simple-highlighter"
+  ],
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "^5.2.10",
+    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "commitizen": "^3.0.7",
+    "cz-conventional-changelog": "^2.1.0",
+    "html-loader": "^0.5.5",
+    "semantic-release": "^15.13.3",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "pkgRoot": "dist",
+    "publishConfig": {"tag": "next"},
+    "publish": ["@semantic-release/github"],
+    "prepare": [
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "package.json",
+          "package-lock.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+    "@semantic-release/github"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JayaKrishnaNamburu/highlighter.git"
+  }
+}
