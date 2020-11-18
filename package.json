@@ -28,7 +28,7 @@
     "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^2.1.0",
     "html-loader": "^0.5.5",
-    "semantic-release": "^15.13.3",
+    "semantic-release": "^17.2.3",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.2.1"
